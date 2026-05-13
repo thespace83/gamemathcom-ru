@@ -1,46 +1,45 @@
-# 3D Math Primer for Graphics and Game Development - Online Edition
+# Учебник по математике 3D-графики и разработке игр - Онлайн-издание
 
-This book is authored by **Fletcher Dunn** and **Dr. Ian Parberry**.
+Авторы книги: **Флетчер Данн** и **доктор Ян Парберри**.
 
-This repository hosts the complete online edition of the book *3D Math Primer for Graphics and Game Development*. It provides a comprehensive guide to the fundamental mathematics and concepts essential for 3D game development, computer graphics, and simulations.
+В этом репозитории хранится полное онлайн-издание книги *Учебник по математике 3D-графики и разработке игр*. Здесь представлено подробное руководство по фундаментальной математике и основным понятиям для разработки трёхмерных игр, компьютерной графики и симуляций.
+## Основные концепции и философия
 
-## Key Features & Philosophy
+Как подчеркивается во введении к книге, её подход включает:
 
-As highlighted in the book's introduction, its approach includes:
+*   **Подробное изложение основных понятий:** Уделяем особое внимание темам трёхмерной математики, недостаточно освещённым в других учебниках.
+*   **Интуитивно понятное обучение:** Для лучшего понимания приоритет отдаётся интуитивно понятному объяснению, подкреплённому строгими математическими доказательствами.
+*   **Экспертность авторов:** Написанная Флетчером Данном — профессионалом в игровой индустрии — и доктором Яном Парберри — пионером в области обучения программированию игр —, книга сочетает практические знания и академический опыт.
+*   **Доступность и интерес:** Книга будет увлекательным и понятным ресурсом для разной аудитории: программистов, дизайнеров и художников.
 
-*   **In-depth coverage of fundamental concepts:** Focusing on foundational 3D math topics that are often briefly covered in other texts.
-*   **Intuitive learning:** Prioritizing intuitive explanations to build understanding, complemented by mathematical rigor.
-*   **Expert Authorship:** Written by Fletcher Dunn, a seasoned game industry professional, and Dr. Ian Parberry, an academic pioneer in game programming education, combining practical insights with academic authority.
-*   **Accessible and Enjoyable:** Designed to be an engaging and understandable resource for a diverse audience, including programmers, designers, and technical artists.
+## Структура репозитория
 
-## Repository Structure
+*   **/book**: Содержит картинки, HTML- и CSS-файлы для второго издания *Учебника по математике 3D-графики и разработке игр*.
+*   **/1st_edition**: Содержит файлы первого издания книги, в том числе исправления ошибок, ответы на упражнения и примеры кода.
+*   **/gdc2021**: Содержит дополнительные материалы к выступлению Флетчера Данна на GDC 2021 (доклад "Getting There in Style: Intro to Interpolation and Control Systems.")
+*   **index.html**: Главная страница онлайн-книги.
+*   **/**: Прочие файлы, включая изображения для сайта (к примеру, `favicon.png`) и другие конфигурационные файлы.
 
-*   **/book**: Contains the complete HTML, CSS, and image files for the second edition of *3D Math Primer for Graphics and Game Development*.
-*   **/1st_edition**: Includes resources for the first edition of the book, such as errata, answers to exercises, and original code samples.
-*   **/gdc2021**: Contains supplemental materials for Fletcher Dunn's GDC 2021 talk, "Getting There in Style: Intro to Interpolation and Control Systems."
-*   **index.html**: The main landing page for the online book.
-*   Other files include images for the website (e.g., `favicon.png`) and potentially configuration files for site hosting.
+## Как читать книгу
 
-## How to Read the Book
+Для того чтобы прочесть книгу:
 
-To read the book:
+1.  Клонируйте или скачайте репозиторий.
+2.  Откройте `index.html`, находящийся в корне.
+    *   Также вы можете перейти в директорию `book/` и открыть `intro.html` или любую другую главу.
 
-1.  Clone or download this repository.
-2.  Open the `index.html` file at the root of the repository in your web browser.
-    *   Alternatively, you can navigate to the `book/` directory and open `intro.html` or any other chapter HTML file to start reading.
+Эта книга предназначена для чтения онлайн и содержит ссылки на главы для более удобной навигации.
 
-The book is designed to be read online and includes hyperlinked chapters and sections for easy navigation.
+Вы также можете получить доступ к книге напрямую на сайте [gamemath.com](http://gamemath.com/). (Репозиторий [diogenesjup/gamemathcom](https://github.com/diogenesjup/gamemathcom) хранит исходники сайта)
 
-You can also access the book directly online at [gamemath.com](http://gamemath.com/). (This repository appears to be the source for the website).
+## Физические копии и другие форматы
 
-## Physical Copies & Other Formats
+*   **Физическая копия (2-е Издание):** Второе издание *Учебника по математике 3D-графики и разработке игр* было опубликовано в 2011. В настоящее время книга не издаётся, но экземпляры можно найти в интернет-магазинах, например на Amazon или Авито.
+*   **E-reader-формат:** Как упоминается на сайте, e-reader-формат в скором времени станет доступен. Следите за обновлениями на [официальном сайте](http://gamemath.com/).
 
-*   **Physical Book (2nd Edition):** The second edition of *3D Math Primer for Graphics and Game Development* was published in 2011. It is currently out of print, but used copies may be available from online retailers like Amazon.
-*   **E-reader Format:** The website mentions that an e-reader optimized version was planned to be available "soon." Check the [official website](http://gamemath.com/) for any updates.
+## Обратная связь
 
-## Feedback
+Авторы рады обратной связи. Вы можете написать им:
 
-The authors welcome feedback on the book. You can reach them via:
-
-*   **Email:** `feedback@gamemath.com`
-*   **Twitter (Fletcher Dunn):** [@ZPostFacto](https://twitter.com/ZPostFacto)
+*   **Почта:** `feedback@gamemath.com`
+*   **Twitter (Флетчер Данн):** [@ZPostFacto](https://twitter.com/ZPostFacto)
