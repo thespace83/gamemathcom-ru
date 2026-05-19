@@ -3,785 +3,873 @@
 
 <!-- Mirrored from gamemath.com/book/intro.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 May 2025 17:04:21 GMT -->
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="3dmathprimer_book.css" rel="stylesheet">
-<link rel="icon" type="image/png" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="3dmathprimer_book.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../favicon.png">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="../../www.googletagmanager.com/gtag/js6bee?id=G-YK41S9NXZG"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YK41S9NXZG');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-YK41S9NXZG');
     </script>
-<title>Вступление - Учебник По Математике 3D-Графики И Разработке Игр</title>
-<style id="MJX-CHTML-styles">
-mjx-container[jax="CHTML"] {
-  line-height: 0;
-}
-
-mjx-container [space="1"] {
-  margin-left: .111em;
-}
-
-mjx-container [space="2"] {
-  margin-left: .167em;
-}
-
-mjx-container [space="3"] {
-  margin-left: .222em;
-}
-
-mjx-container [space="4"] {
-  margin-left: .278em;
-}
-
-mjx-container [space="5"] {
-  margin-left: .333em;
-}
-
-mjx-container [rspace="1"] {
-  margin-right: .111em;
-}
-
-mjx-container [rspace="2"] {
-  margin-right: .167em;
-}
-
-mjx-container [rspace="3"] {
-  margin-right: .222em;
-}
-
-mjx-container [rspace="4"] {
-  margin-right: .278em;
-}
-
-mjx-container [rspace="5"] {
-  margin-right: .333em;
-}
-
-mjx-container [size="s"] {
-  font-size: 70.7%;
-}
-
-mjx-container [size="ss"] {
-  font-size: 50%;
-}
-
-mjx-container [size="Tn"] {
-  font-size: 60%;
-}
-
-mjx-container [size="sm"] {
-  font-size: 85%;
-}
-
-mjx-container [size="lg"] {
-  font-size: 120%;
-}
-
-mjx-container [size="Lg"] {
-  font-size: 144%;
-}
-
-mjx-container [size="LG"] {
-  font-size: 173%;
-}
-
-mjx-container [size="hg"] {
-  font-size: 207%;
-}
-
-mjx-container [size="HG"] {
-  font-size: 249%;
-}
-
-mjx-container [width="full"] {
-  width: 100%;
-}
-
-mjx-box {
-  display: inline-block;
-}
-
-mjx-block {
-  display: block;
-}
-
-mjx-itable {
-  display: inline-table;
-}
-
-mjx-row {
-  display: table-row;
-}
-
-mjx-row > * {
-  display: table-cell;
-}
-
-mjx-mtext {
-  display: inline-block;
-}
-
-mjx-mstyle {
-  display: inline-block;
-}
-
-mjx-merror {
-  display: inline-block;
-  color: red;
-  background-color: yellow;
-}
-
-mjx-mphantom {
-  visibility: hidden;
-}
-
-mjx-assistive-mml {
-  position: absolute !important;
-  top: 0px;
-  left: 0px;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 1px 0px 0px 0px !important;
-  border: 0px !important;
-  display: block !important;
-  width: auto !important;
-  overflow: hidden !important;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-mjx-assistive-mml[display="block"] {
-  width: 100% !important;
-}
-
-mjx-math {
-  display: inline-block;
-  text-align: left;
-  line-height: 0;
-  text-indent: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  font-size-adjust: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  word-spacing: normal;
-  white-space: nowrap;
-  direction: ltr;
-  padding: 1px 0;
-}
-
-mjx-container[jax="CHTML"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="CHTML"][display="true"][width="full"] {
-  display: flex;
-}
-
-mjx-container[jax="CHTML"][display="true"] mjx-math {
-  padding: 0;
-}
-
-mjx-container[jax="CHTML"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="CHTML"][justify="right"] {
-  text-align: right;
-}
-
-mjx-mi {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-c {
-  display: inline-block;
-}
-
-mjx-utext {
-  display: inline-block;
-  padding: .75em 0 .2em 0;
-}
-
-mjx-c::before {
-  display: block;
-  width: 0;
-}
-
-.MJX-TEX {
-  font-family: MJXZERO, MJXTEX;
-}
-
-.TEX-B {
-  font-family: MJXZERO, MJXTEX-B;
-}
-
-.TEX-I {
-  font-family: MJXZERO, MJXTEX-I;
-}
-
-.TEX-MI {
-  font-family: MJXZERO, MJXTEX-MI;
-}
-
-.TEX-BI {
-  font-family: MJXZERO, MJXTEX-BI;
-}
-
-.TEX-S1 {
-  font-family: MJXZERO, MJXTEX-S1;
-}
-
-.TEX-S2 {
-  font-family: MJXZERO, MJXTEX-S2;
-}
-
-.TEX-S3 {
-  font-family: MJXZERO, MJXTEX-S3;
-}
-
-.TEX-S4 {
-  font-family: MJXZERO, MJXTEX-S4;
-}
-
-.TEX-A {
-  font-family: MJXZERO, MJXTEX-A;
-}
-
-.TEX-C {
-  font-family: MJXZERO, MJXTEX-C;
-}
-
-.TEX-CB {
-  font-family: MJXZERO, MJXTEX-CB;
-}
-
-.TEX-FR {
-  font-family: MJXZERO, MJXTEX-FR;
-}
-
-.TEX-FRB {
-  font-family: MJXZERO, MJXTEX-FRB;
-}
-
-.TEX-SS {
-  font-family: MJXZERO, MJXTEX-SS;
-}
-
-.TEX-SSB {
-  font-family: MJXZERO, MJXTEX-SSB;
-}
-
-.TEX-SSI {
-  font-family: MJXZERO, MJXTEX-SSI;
-}
-
-.TEX-SC {
-  font-family: MJXZERO, MJXTEX-SC;
-}
-
-.TEX-T {
-  font-family: MJXZERO, MJXTEX-T;
-}
-
-.TEX-V {
-  font-family: MJXZERO, MJXTEX-V;
-}
-
-.TEX-VB {
-  font-family: MJXZERO, MJXTEX-VB;
-}
-
-mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
-  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
-}
-
-@font-face /* 0 */ {
-  font-family: MJXZERO;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
-}
-
-@font-face /* 1 */ {
-  font-family: MJXTEX;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
-}
-
-@font-face /* 2 */ {
-  font-family: MJXTEX-B;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
-}
-
-@font-face /* 3 */ {
-  font-family: MJXTEX-I;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
-}
-
-@font-face /* 4 */ {
-  font-family: MJXTEX-MI;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
-}
-
-@font-face /* 5 */ {
-  font-family: MJXTEX-BI;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
-}
-
-@font-face /* 6 */ {
-  font-family: MJXTEX-S1;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
-}
-
-@font-face /* 7 */ {
-  font-family: MJXTEX-S2;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
-}
-
-@font-face /* 8 */ {
-  font-family: MJXTEX-S3;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
-}
-
-@font-face /* 9 */ {
-  font-family: MJXTEX-S4;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
-}
-
-@font-face /* 10 */ {
-  font-family: MJXTEX-A;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
-}
-
-@font-face /* 11 */ {
-  font-family: MJXTEX-C;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
-}
-
-@font-face /* 12 */ {
-  font-family: MJXTEX-CB;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
-}
-
-@font-face /* 13 */ {
-  font-family: MJXTEX-FR;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
-}
-
-@font-face /* 14 */ {
-  font-family: MJXTEX-FRB;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
-}
-
-@font-face /* 15 */ {
-  font-family: MJXTEX-SS;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
-}
-
-@font-face /* 16 */ {
-  font-family: MJXTEX-SSB;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
-}
-
-@font-face /* 17 */ {
-  font-family: MJXTEX-SSI;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
-}
-
-@font-face /* 18 */ {
-  font-family: MJXTEX-SC;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
-}
-
-@font-face /* 19 */ {
-  font-family: MJXTEX-T;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
-}
-
-@font-face /* 20 */ {
-  font-family: MJXTEX-V;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
-}
-
-@font-face /* 21 */ {
-  font-family: MJXTEX-VB;
-  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
-}
-
-mjx-c.mjx-c1D439.TEX-I::before {
-  padding: 0.68em 0.749em 0 0;
-  content: "F";
-}
-
-[noIC] mjx-c.mjx-c1D439.TEX-I:last-child::before {
-  padding-right: 0.643em;
-}
-
-mjx-c.mjx-c1D44E.TEX-I::before {
-  padding: 0.441em 0.529em 0.01em 0;
-  content: "a";
-}
-
-mjx-c.mjx-c1D45A.TEX-I::before {
-  padding: 0.442em 0.878em 0.011em 0;
-  content: "m";
-}
-</style></head><body id="body">
+    <title>Вступление - Учебник По Математике 3D-Графики И Разработке Игр</title>
+    <style id="MJX-CHTML-styles">
+        mjx-container[jax="CHTML"] {
+            line-height: 0;
+        }
+
+        mjx-container [space="1"] {
+            margin-left: .111em;
+        }
+
+        mjx-container [space="2"] {
+            margin-left: .167em;
+        }
+
+        mjx-container [space="3"] {
+            margin-left: .222em;
+        }
+
+        mjx-container [space="4"] {
+            margin-left: .278em;
+        }
+
+        mjx-container [space="5"] {
+            margin-left: .333em;
+        }
+
+        mjx-container [rspace="1"] {
+            margin-right: .111em;
+        }
+
+        mjx-container [rspace="2"] {
+            margin-right: .167em;
+        }
+
+        mjx-container [rspace="3"] {
+            margin-right: .222em;
+        }
+
+        mjx-container [rspace="4"] {
+            margin-right: .278em;
+        }
+
+        mjx-container [rspace="5"] {
+            margin-right: .333em;
+        }
+
+        mjx-container [size="s"] {
+            font-size: 70.7%;
+        }
+
+        mjx-container [size="ss"] {
+            font-size: 50%;
+        }
+
+        mjx-container [size="Tn"] {
+            font-size: 60%;
+        }
+
+        mjx-container [size="sm"] {
+            font-size: 85%;
+        }
+
+        mjx-container [size="lg"] {
+            font-size: 120%;
+        }
+
+        mjx-container [size="Lg"] {
+            font-size: 144%;
+        }
+
+        mjx-container [size="LG"] {
+            font-size: 173%;
+        }
+
+        mjx-container [size="hg"] {
+            font-size: 207%;
+        }
+
+        mjx-container [size="HG"] {
+            font-size: 249%;
+        }
+
+        mjx-container [width="full"] {
+            width: 100%;
+        }
+
+        mjx-box {
+            display: inline-block;
+        }
+
+        mjx-block {
+            display: block;
+        }
+
+        mjx-itable {
+            display: inline-table;
+        }
+
+        mjx-row {
+            display: table-row;
+        }
+
+        mjx-row > * {
+            display: table-cell;
+        }
+
+        mjx-mtext {
+            display: inline-block;
+        }
+
+        mjx-mstyle {
+            display: inline-block;
+        }
+
+        mjx-merror {
+            display: inline-block;
+            color: red;
+            background-color: yellow;
+        }
+
+        mjx-mphantom {
+            visibility: hidden;
+        }
+
+        mjx-assistive-mml {
+            position: absolute !important;
+            top: 0px;
+            left: 0px;
+            clip: rect(1px, 1px, 1px, 1px);
+            padding: 1px 0px 0px 0px !important;
+            border: 0px !important;
+            display: block !important;
+            width: auto !important;
+            overflow: hidden !important;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        mjx-assistive-mml[display="block"] {
+            width: 100% !important;
+        }
+
+        mjx-math {
+            display: inline-block;
+            text-align: left;
+            line-height: 0;
+            text-indent: 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 100%;
+            font-size-adjust: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            word-spacing: normal;
+            white-space: nowrap;
+            direction: ltr;
+            padding: 1px 0;
+        }
+
+        mjx-container[jax="CHTML"][display="true"] {
+            display: block;
+            text-align: center;
+            margin: 1em 0;
+        }
+
+        mjx-container[jax="CHTML"][display="true"][width="full"] {
+            display: flex;
+        }
+
+        mjx-container[jax="CHTML"][display="true"] mjx-math {
+            padding: 0;
+        }
+
+        mjx-container[jax="CHTML"][justify="left"] {
+            text-align: left;
+        }
+
+        mjx-container[jax="CHTML"][justify="right"] {
+            text-align: right;
+        }
+
+        mjx-mi {
+            display: inline-block;
+            text-align: left;
+        }
+
+        mjx-c {
+            display: inline-block;
+        }
+
+        mjx-utext {
+            display: inline-block;
+            padding: .75em 0 .2em 0;
+        }
+
+        mjx-c::before {
+            display: block;
+            width: 0;
+        }
+
+        .MJX-TEX {
+            font-family: MJXZERO, MJXTEX;
+        }
+
+        .TEX-B {
+            font-family: MJXZERO, MJXTEX-B;
+        }
+
+        .TEX-I {
+            font-family: MJXZERO, MJXTEX-I;
+        }
+
+        .TEX-MI {
+            font-family: MJXZERO, MJXTEX-MI;
+        }
+
+        .TEX-BI {
+            font-family: MJXZERO, MJXTEX-BI;
+        }
+
+        .TEX-S1 {
+            font-family: MJXZERO, MJXTEX-S1;
+        }
+
+        .TEX-S2 {
+            font-family: MJXZERO, MJXTEX-S2;
+        }
+
+        .TEX-S3 {
+            font-family: MJXZERO, MJXTEX-S3;
+        }
+
+        .TEX-S4 {
+            font-family: MJXZERO, MJXTEX-S4;
+        }
+
+        .TEX-A {
+            font-family: MJXZERO, MJXTEX-A;
+        }
+
+        .TEX-C {
+            font-family: MJXZERO, MJXTEX-C;
+        }
+
+        .TEX-CB {
+            font-family: MJXZERO, MJXTEX-CB;
+        }
+
+        .TEX-FR {
+            font-family: MJXZERO, MJXTEX-FR;
+        }
+
+        .TEX-FRB {
+            font-family: MJXZERO, MJXTEX-FRB;
+        }
+
+        .TEX-SS {
+            font-family: MJXZERO, MJXTEX-SS;
+        }
+
+        .TEX-SSB {
+            font-family: MJXZERO, MJXTEX-SSB;
+        }
+
+        .TEX-SSI {
+            font-family: MJXZERO, MJXTEX-SSI;
+        }
+
+        .TEX-SC {
+            font-family: MJXZERO, MJXTEX-SC;
+        }
+
+        .TEX-T {
+            font-family: MJXZERO, MJXTEX-T;
+        }
+
+        .TEX-V {
+            font-family: MJXZERO, MJXTEX-V;
+        }
+
+        .TEX-VB {
+            font-family: MJXZERO, MJXTEX-VB;
+        }
+
+        mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+            font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+        }
+
+        @font-face /* 0 */ {
+            font-family: MJXZERO;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+        }
+
+        @font-face /* 1 */ {
+            font-family: MJXTEX;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+        }
+
+        @font-face /* 2 */ {
+            font-family: MJXTEX-B;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+        }
+
+        @font-face /* 3 */ {
+            font-family: MJXTEX-I;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+        }
+
+        @font-face /* 4 */ {
+            font-family: MJXTEX-MI;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+        }
+
+        @font-face /* 5 */ {
+            font-family: MJXTEX-BI;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+        }
+
+        @font-face /* 6 */ {
+            font-family: MJXTEX-S1;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+        }
+
+        @font-face /* 7 */ {
+            font-family: MJXTEX-S2;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+        }
+
+        @font-face /* 8 */ {
+            font-family: MJXTEX-S3;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+        }
+
+        @font-face /* 9 */ {
+            font-family: MJXTEX-S4;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+        }
+
+        @font-face /* 10 */ {
+            font-family: MJXTEX-A;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+        }
+
+        @font-face /* 11 */ {
+            font-family: MJXTEX-C;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+        }
+
+        @font-face /* 12 */ {
+            font-family: MJXTEX-CB;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+        }
+
+        @font-face /* 13 */ {
+            font-family: MJXTEX-FR;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+        }
+
+        @font-face /* 14 */ {
+            font-family: MJXTEX-FRB;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+        }
+
+        @font-face /* 15 */ {
+            font-family: MJXTEX-SS;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+        }
+
+        @font-face /* 16 */ {
+            font-family: MJXTEX-SSB;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+        }
+
+        @font-face /* 17 */ {
+            font-family: MJXTEX-SSI;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+        }
+
+        @font-face /* 18 */ {
+            font-family: MJXTEX-SC;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+        }
+
+        @font-face /* 19 */ {
+            font-family: MJXTEX-T;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+        }
+
+        @font-face /* 20 */ {
+            font-family: MJXTEX-V;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+        }
+
+        @font-face /* 21 */ {
+            font-family: MJXTEX-VB;
+            src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+        }
+
+        mjx-c.mjx-c1D439.TEX-I::before {
+            padding: 0.68em 0.749em 0 0;
+            content: "F";
+        }
+
+        [noIC] mjx-c.mjx-c1D439.TEX-I:last-child::before {
+            padding-right: 0.643em;
+        }
+
+        mjx-c.mjx-c1D44E.TEX-I::before {
+            padding: 0.441em 0.529em 0.01em 0;
+            content: "a";
+        }
+
+        mjx-c.mjx-c1D45A.TEX-I::before {
+            padding: 0.442em 0.878em 0.011em 0;
+            content: "m";
+        }
+    </style>
+</head>
+<body id="body">
 <script>
     var body = document.getElementById('body');
-    var lightmode = ( parseInt( window.localStorage && window.localStorage.getItem( 'lightMode' ) ) ) ? 1 : 0;
-    if ( lightmode )
-        body.classList.add( "LightMode" );
+    var lightmode = (parseInt(window.localStorage && window.localStorage.getItem('lightMode'))) ? 1 : 0;
+    if (lightmode)
+        body.classList.add("LightMode");
 </script>
 <div id="BodyContainer">
-<div id="LeftColumn"></div>
-<div id="MainColumn">
-<header class="NavBar">
-<div class="NavPrevChapter"></div><div class="NavContents"><a href="index.html">Оглавление</a></div>
-<div class="NavNextChapter"><a class="NavChapterNum" href="cartesianspace.html">Декартова система координат >>
-</a></div>
-</header>
-<div class="ChapterTitleSection">
-    <div class="ChapterTitle">Вступление
-<img style="float:right; width:1em; height:1em" id="lightmodetoggle" src="../light_dark_toggle.png">
-</div>
-<script>
-    document.getElementById('lightmodetoggle').onclick = function() {
-        lightmode = lightmode ? 0 : 1;
-        if ( lightmode )
-            body.classList.add( "LightMode" );
-        else
-            body.classList.remove( "LightMode" );
-        if ( window.localStorage )
-            window.localStorage.setItem( 'lightMode', lightmode )
-    }
-</script>
-<div class="ChapterQuotes">
-<div class="WittyQuotation">
-    Прежде всего — важное, но не обязательно по порядку <!-- TODO обновить шутку -->
-<div class="QuotationSource">&#8212;&#160; Доктор Кто из <i>Меглоса</i> (1980)</div>
-</div>
-</div>
-</div>
+    <div id="LeftColumn"></div>
+    <div id="MainColumn">
+        <header class="NavBar">
+            <div class="NavPrevChapter"></div>
+            <div class="NavContents"><a href="index.html">Оглавление</a></div>
+            <div class="NavNextChapter"><a class="NavChapterNum" href="cartesianspace.html">Декартова система координат
+                >>
+            </a></div>
+        </header>
+        <div class="ChapterTitleSection">
+            <div class="ChapterTitle">Вступление
+                <img style="float:right; width:1em; height:1em" id="lightmodetoggle" src="../light_dark_toggle.png">
+            </div>
+            <script>
+                document.getElementById('lightmodetoggle').onclick = function () {
+                    lightmode = lightmode ? 0 : 1;
+                    if (lightmode)
+                        body.classList.add("LightMode");
+                    else
+                        body.classList.remove("LightMode");
+                    if (window.localStorage)
+                        window.localStorage.setItem('lightMode', lightmode)
+                }
+            </script>
+            <div class="ChapterQuotes">
+                <div class="WittyQuotation">
+                    Прежде всего — важное, но не обязательно по порядку <!-- TODO обновить шутку -->
+                    <div class="QuotationSource">&#8212;&#160; Доктор Кто из <i>Меглоса</i> (1980)</div>
+                </div>
+            </div>
+        </div>
 
-<h1 id="about_web_version"><span class="SectionTitle">Об онлайн издании</span></h1>
-<p class="NoIndent">
-То, что вы сейчас читаете изначально было <i>книгой</i>. Сегодня большинство из нас получает знания о 3D-математике и
-видеоиграх из интернета, поэтому некоторые читатели могут не представлять, как выглядит физическая копия книги. Если
-Вы один из них — посмотрите <a href="#book_anachronism">Изображение 1.</a>
-</p>
-<div id="book_anachronism" class="Display Figure Narrow">
-<div class="Body">
-		<img class="WithFrame" src="figs/intro/book_anachronism.png" loading="lazy" width="206" height="219" alt="Фото книги на столе">
-</div><span class="Caption">
+        <h1 id="about_web_version"><span class="SectionTitle">Об онлайн издании</span></h1>
+        <p class="NoIndent">
+            То, что вы сейчас читаете изначально было <i>книгой</i>. Сегодня большинство из нас получает знания о
+            3D-математике и
+            видеоиграх из интернета, поэтому некоторые читатели могут не представлять, как выглядит физическая копия
+            книги. Если
+            Вы один из них — посмотрите <a href="#book_anachronism">Изображение 1.</a>
+        </p>
+        <div id="book_anachronism" class="Display Figure Narrow">
+            <div class="Body">
+                <img class="WithFrame" src="figs/intro/book_anachronism.png" loading="lazy" width="206" height="219"
+                     alt="Фото книги на столе">
+            </div>
+            <span class="Caption">
 <span class="Label">Изображение 1</span><span class="CaptionText">Когда-то для передачи знаний использовались физические носители</span>
 </span>
-</div><p>
-Книги содержат такие архаичные вещи, как регистрационный номер ISBN, библиотечный индекс, библиографию, пронумерованные
-главы, разделы и страницы, также сплошные абзацы, не разбитые на фрагменты по 280 символов — как, кстати, абзац,
-который Вы сейчас читаете. Это кладь знаний, весом около полутора килограммов, даёт множество преимуществ перед
-онлайн форматом. С её помощью можно подпереть стол, или защитить этот стол от горячих капель кофе. Также умные книги
-можно поставить на видное место для того, чтобы выразить свою индивидуальность — реальную или желаемую —, и это будет
-работать независимо от того, читали вы книгу или нет! Но самое большое преимущество бумажной книги заключается в том,
-что взяв её в руки можно сразу понять, сколько времени уйдёт на её прочтение.
-</p>
-<p>
-К слову, эта книга была опубликована в 2011-м году. В 2011-м свой второй день рождения отпраздновала <i>League of
-Legends</i>, в этом году был выпущен <i>Slyrim</i> и до релиза PS4 оставалось ещё 2 года. Но мы с гордостью скажем, что
-большинство материатов из этой книги, как и Барт Симпсон, не постореют ни на день и через десятки лет. Веторы и матрицы
-работают и по сей день, F также равно ma, и люди всё ещё используют Blinn-Phong.
-</p>
-<p>
-Однако, некоторые части это книги всё же начали потихоньку устаревать. Это две наименее теоретические и наиболее
-практические главы (Главы <a href="graphics.html">10</a> и <a href="dynamics.html">12</a>), которые не помешало бы
-обновить и сместить акценты. В этой книге нет ссылок на сайты, моложе 10 лет. Шутки и отсылки к поп-культуре, которые и
-так были на грани допустимого, теперь устарели <i>(однако, Я — переводчик — при возможности постараюсь исправить
-это)</i>. Мы будем работать над этим, и Вы можете помочь, <a href="#feedback">
-оставив отзыв</a>.
-</p>
+        </div>
+        <p>
+            Книги содержат такие архаичные вещи, как регистрационный номер ISBN, библиотечный индекс, библиографию,
+            пронумерованные
+            главы, разделы и страницы, также сплошные абзацы, не разбитые на фрагменты по 280 символов — как, кстати,
+            абзац,
+            который Вы сейчас читаете. Это кладь знаний, весом около полутора килограммов, даёт множество преимуществ
+            перед
+            онлайн форматом. С её помощью можно подпереть стол, или защитить этот стол от горячих капель кофе. Также
+            умные книги
+            можно поставить на видное место для того, чтобы выразить свою индивидуальность — реальную или желаемую —, и
+            это будет
+            работать независимо от того, читали вы книгу или нет! Но самое большое преимущество бумажной книги
+            заключается в том,
+            что взяв её в руки можно сразу понять, сколько времени уйдёт на её прочтение.
+        </p>
+        <p>
+            К слову, эта книга была опубликована в 2011-м году. В 2011-м свой второй день рождения отпраздновала <i>League
+            of
+            Legends</i>, в этом году был выпущен <i>Slyrim</i> и до релиза PS4 оставалось ещё 2 года. Но мы с гордостью
+            скажем, что
+            большинство материатов из этой книги, как и Барт Симпсон, не постореют ни на день и через десятки лет.
+            Веторы и матрицы
+            работают и по сей день, F также равно ma, и люди всё ещё используют Blinn-Phong.
+        </p>
+        <p>
+            Однако, некоторые части это книги всё же начали потихоньку устаревать. Это две наименее теоретические и
+            наиболее
+            практические главы (Главы <a href="graphics.html">10</a> и <a href="dynamics.html">12</a>), которые не
+            помешало бы
+            обновить и сместить акценты. В этой книге нет ссылок на сайты, моложе 10 лет. Шутки и отсылки к
+            поп-культуре, которые и
+            так были на грани допустимого, теперь устарели <i>(однако, Я — переводчик — при возможности постараюсь
+            исправить
+            это)</i>. Мы будем работать над этим, и Вы можете помочь, <a href="#feedback">
+            оставив отзыв</a>.
+        </p>
 
-<h1 id="what"><span class="SectionTitle">Для Кого Эта Книга</span></h1>
-<p class="NoIndent">
-Эта книга о 3D-математике: геометрии и алгебре в трехмерном пространстве. Книга научит Вас описывать объекты, их
-позицию, ориентацию и траекторию в 3D с помощью математики. Эта книга не про компьютерную графику, не про симуляции,
-даже не про вычислительную геометрию, однако, если у Вас в планах изучить и эти предметы, ты Вам определённо
-понадобится информация из этой книги.
-</p>
-<p>
-Это не просто книга о программировании видеоигр. Мы предпологаем, что целью большинства наших читателей является создание
-игр, но мы нацелены на более широкую аудиторию, и мы сделали эту книгу интересной для всех. Если вы программист,
-или хотите изучить, как делать игры, добро пожаловать на борт! Если Вам не подошёл ни один из этих критериев, у нас
-всё равно есть много интересного для Вас. Мы приложили не мало усилий, чтобы сделать книгу полезной для дизайнеров и
-технических художников. Хотя в этой книге есть фрагменты кода, они (надеемся) понятны даже тем, кто не умеет
-программировать — самое главное разбираться в окружающих этот код концепциях (к слову, обратное утверждение неверно).
-Мы показываем примеры кода, чтобы показать, как можно реализовать те или иные идеи на компьютере, а не для объяснения
-самих идей.
-</p>
-<p>
-Хоть в названии книги и сказано, что она про "разработку игр", многое из того, что здесь написано применимо за пределами
-видеоигр. Практически любой, кто хочет заниматься симуляциями, рендерингом или понимать трехмерное пространство найдёт эту
-книгу полезной. Мы стараемся приводить мотивирующие примеры из мира видеоигр, но вы всё равно не окажетесь в стороне, даже
-если последней игрой, которую Вы запускали, была <i>Space Quest</i><a href="#footnote_1" class="FootnoteRef">1</a>. Если
-Вас интересуют более "взрослые" темы, такие как кровь, кишки и мясо — будьте уверены, здесь этого не будет.
-</p>
+        <h1 id="what"><span class="SectionTitle">Для Кого Эта Книга</span></h1>
+        <p class="NoIndent">
+            Эта книга о 3D-математике: геометрии и алгебре в трехмерном пространстве. Книга научит Вас описывать
+            объекты, их
+            позицию, ориентацию и траекторию в 3D с помощью математики. Эта книга не про компьютерную графику, не про
+            симуляции,
+            даже не про вычислительную геометрию, однако, если у Вас в планах изучить и эти предметы, ты Вам определённо
+            понадобится информация из этой книги.
+        </p>
+        <p>
+            Это не просто книга о программировании видеоигр. Мы предпологаем, что целью большинства наших читателей
+            является создание
+            игр, но мы нацелены на более широкую аудиторию, и мы сделали эту книгу интересной для всех. Если вы
+            программист,
+            или хотите изучить, как делать игры, добро пожаловать на борт! Если Вам не подошёл ни один из этих
+            критериев, у нас
+            всё равно есть много интересного для Вас. Мы приложили не мало усилий, чтобы сделать книгу полезной для
+            дизайнеров и
+            технических художников. Хотя в этой книге есть фрагменты кода, они (надеемся) понятны даже тем, кто не умеет
+            программировать — самое главное разбираться в окружающих этот код концепциях (к слову, обратное утверждение
+            неверно).
+            Мы показываем примеры кода, чтобы показать, как можно реализовать те или иные идеи на компьютере, а не для
+            объяснения
+            самих идей.
+        </p>
+        <p>
+            Хоть в названии книги и сказано, что она про "разработку игр", многое из того, что здесь написано применимо
+            за пределами
+            видеоигр. Практически любой, кто хочет заниматься симуляциями, рендерингом или понимать трехмерное
+            пространство найдёт эту
+            книгу полезной. Мы стараемся приводить мотивирующие примеры из мира видеоигр, но вы всё равно не окажетесь в
+            стороне, даже
+            если последней игрой, которую Вы запускали, была <i>Space Quest</i><a href="#footnote_1"
+                                                                                  class="FootnoteRef">1</a>. Если
+            Вас интересуют более "взрослые" темы, такие как кровь, кишки и мясо — будьте уверены, здесь этого не будет.
+        </p>
 
-<h1 id="why"><span class="SectionTitle">Почему Вам Стоит Прочесть Эту Книгу</span></h1>
-<p class="NoIndent">
-Эта книга обладает множеством уникальных особенностей — темы, подход, авторы и стиль книги.
-</p>
-<p class="NoIndent">
-<span class="h3">Уникальные темы.</span>
-Эта книга заполнит пробелы, оставленные другими книгами о графике, линейной алгебре, симуляциях и программировании.
-Поскольку это книга для начинающих, мы сконцентрируем усилия на том, чтобы тщательно изучить самые основы, которым
-обычно уделено всего несколько страниц, или которые вынесены в приложение к книге (потому что, в конце концов,
-Вы и так всё это знаете). Мы заметили, что именно эти темы зачастую вызывают проблемы у новичков! В каком-то смысле,
-эта книга зеркальное отражение склеенных вместе книг о графике, физике и алгебре. Эта книга могла начаться с краткого
-описания математических основ, с последующим глубоким анализом областей применения, однако мы начнём с фундамента
-математики, а затем дадим краткий обзор областей применения.
-</p>
-<p>
-В этой книге мы постарались сделать так, чтобы она была удобна для начинающих, но это не значит, что мы навсегда
-застрянем на начальном уровне. Здесь много материала, который традиционно считается «продвинутым» и изучается на старших
-курсах или в магистратуре. На самом деле эти темы скорее узкоспециализированные, чем сложные, и в последнее время они
-стали важными базовыми знаниями, которые необходимо усвоить на более ранних этапах обучения. Отчасти, именно поэтому
-возникла потребность в такой книге.
-</p>
-<p class="NoIndent"><span class="h3">Уникальный подход.</span>
-Многие авторы считают, что им удается найти идеальный баланс между педантичностью и красноречием, чтобы лучше донести
-свою мысль до читателей — и мы не исключение. Однако мы понимаем, что люди, не согласные с этой смелой самооценкой,
-скорее всего, сочтут эту книгу слишком неформальной. Мы сосредоточились на понятных интуитивно понятных объяснениях, иногда в
-ущерб строгости. Наша цель — упростить, но не переупрощать. Мы ведем читателей к цели по пути, на котором нет троллей и
-драконов. Так зачем же начинать путешествие с того, чтобы пугать Вас ими еще до того, как мы расскажем, куда и зачем мы
-направляемся? Однако, поскольку мы знаем, что в конце концов читатели сами пройдут этот путь, после того как мы
-достигнем цели, мы вернемся и расскажем, где их подстерегали опасности. Но иногда нам приходится перекладывать борьбу с
-троллями на что-то другое. Особенно если мы предполагаем, что Ваш обычный маршрут не приведет вас к источнику это самой
-опасности. Тем, кто собирается часто бывать в этих краях, стоит пообщаться с местными, чтобы узнать по-больше полезного.
-Это не значит, что мы считаем строгость необязательной. Просто мы считаем, что проще прийти к
-строгости после того, как сформируется интуитивное представление об общей картине, а не начинать каждую дискуссию с
-определений и аксиом, необходимых для решения пограничных случаев. Откровенно говоря, сегодня читатель может <i>
-бесплатно</i> ознакомиться с краткими и формальными изложениями в Википедии или на сайте <a href="https://mathworld.wolfram.com/">Wolfram MathWorld</a>, поэтому мы
-считаем, что ни одна книга не стоит того, чтобы за нее купить, если в ней слишком много внимания уделяется
-определениям, аксиомам, доказательствам и пограничным случаям, особенно если речь идет о вводном материале,
-предназначенном в первую очередь для инженеров.
-</p>
-<p class="NoIndent"><span class="h3">Unique authors.</span>  Our combined experience brings together academic authority with
-in-the-trenches practical advice.  Fletcher Dunn has been making video games professionally
-since 1996.  He worked at Terminal Reality in Dallas, where as principal programmer he was one
-of the architects of the Infernal engine and lead programmer on <i>BloodRayne</i>.  He was a
-technical director for The Walt Disney Company at Wideload Games in Chicago and the lead
-programmer for <i>Disney Guilty Party</i>, IGN's E3 2010 Family Game of the Year.  He now works
-for Valve Software in Bellevue, Washington and has contributed to Steam and all of Valve's recent
-games.  He is the primary author of the <a href="../../github.com/ValveSoftware/GameNetworkingSockets.html">GameNetworkingSockets</a>
-networking library and the <a href="https://partner.steamgames.com/doc/features/multiplayer/steamdatagramrelay">Steam Datagram Relay</a>
-service.  But his biggest claim to fame by far is as the namesake of Corporal Dunn from
-<i>Call of Duty: Modern Warfare 2</i>.
-</p>
-<p>
-<a href="http://ianparberry.com/">Dr. Ian Parberry</a> has more than 35 years of experience in research
-and teaching in academia. This is his sixth book, his third on game programming. He is currently a
-tenured full professor in the Department of Computer Science &amp; Engineering at the University of
-North Texas. He is nationally known as one of the pioneers of game programming in higher education,
-and has been teaching game programming classes at the University of North Texas continuously since 1993.
-</p>
-<p class="NoIndent"><span class="h3">Unique writing style.</span>  We hope you will enjoy reading this math book (say <i>what</i>?)
-for two reasons.  Most important, we want you to <i>learn</i> from this book, and learning
-something you are interested in is fun.  Secondarily, we want you to enjoy <i>reading</i> this
-book in the same way that you enjoy reading a work of literature.  We have no delusions that
-we're in the same class as
-    Mark Twain, or that this book is destined to become a classic like, say,
-<i>The Hitchhikers Guide to the Galaxy</i>. But one can always have aspirations.  Honestly, we are
-just
-    silly people.  At the same time, no writing style should stand in the way of the first
-priority: clear communication of mathematical knowledge about video games.<a href="#footnote_2" class="FootnoteRef">2</a>
-</p>
+        <h1 id="why"><span class="SectionTitle">Почему Вам Стоит Прочесть Эту Книгу</span></h1>
+        <p class="NoIndent">
+            Эта книга обладает множеством уникальных особенностей — темы, подход, авторы и стиль книги.
+        </p>
+        <p class="NoIndent">
+            <span class="h3">Уникальные темы.</span>
+            Эта книга заполнит пробелы, оставленные другими книгами о графике, линейной алгебре, симуляциях и
+            программировании.
+            Поскольку это книга для начинающих, мы сконцентрируем усилия на том, чтобы тщательно изучить самые основы,
+            которым
+            обычно уделено всего несколько страниц, или которые вынесены в приложение к книге (потому что, в конце
+            концов,
+            Вы и так всё это знаете). Мы заметили, что именно эти темы зачастую вызывают проблемы у новичков! В каком-то
+            смысле,
+            эта книга зеркальное отражение склеенных вместе книг о графике, физике и алгебре. Эта книга могла начаться с
+            краткого
+            описания математических основ, с последующим глубоким анализом областей применения, однако мы начнём с
+            фундамента
+            математики, а затем дадим краткий обзор областей применения.
+        </p>
+        <p>
+            В этой книге мы постарались сделать так, чтобы она была удобна для начинающих, но это не значит, что мы
+            навсегда
+            застрянем на начальном уровне. Здесь много материала, который традиционно считается «продвинутым» и
+            изучается на старших
+            курсах или в магистратуре. На самом деле эти темы скорее узкоспециализированные, чем сложные, и в последнее
+            время они
+            стали важными базовыми знаниями, которые необходимо усвоить на более ранних этапах обучения. Отчасти, именно
+            поэтому
+            возникла потребность в такой книге.
+        </p>
+        <p class="NoIndent"><span class="h3">Уникальный подход.</span>
+            Многие авторы считают, что им удается найти идеальный баланс между педантичностью и красноречием, чтобы
+            лучше донести
+            свою мысль до читателей — и мы не исключение. Однако мы понимаем, что люди, не согласные с этой смелой
+            самооценкой,
+            скорее всего, сочтут эту книгу слишком неформальной. Мы сосредоточились на понятных интуитивно понятных
+            объяснениях, иногда в
+            ущерб строгости. Наша цель — упростить, но не переупрощать. Мы ведем читателей к цели по пути, на котором
+            нет троллей и
+            драконов. Так зачем же начинать путешествие с того, чтобы пугать Вас ими еще до того, как мы расскажем, куда
+            и зачем мы
+            направляемся? Однако, поскольку мы знаем, что в конце концов читатели сами пройдут этот путь, после того как
+            мы
+            достигнем цели, мы вернемся и расскажем, где их подстерегали опасности. Но иногда нам приходится
+            перекладывать борьбу с
+            троллями на что-то другое. Особенно если мы предполагаем, что Ваш обычный маршрут не приведет вас к
+            источнику это самой
+            опасности. Тем, кто собирается часто бывать в этих краях, стоит пообщаться с местными, чтобы узнать
+            по-больше полезного.
+            Это не значит, что мы считаем строгость необязательной. Просто мы считаем, что проще прийти к
+            строгости после того, как сформируется интуитивное представление об общей картине, а не начинать каждую
+            дискуссию с
+            определений и аксиом, необходимых для решения пограничных случаев. Откровенно говоря, сегодня читатель может
+            <i>
+                бесплатно</i> ознакомиться с краткими и формальными изложениями в Википедии или на сайте <a
+                    href="https://mathworld.wolfram.com/">Wolfram MathWorld</a>, поэтому мы
+            считаем, что ни одна книга не стоит того, чтобы за нее купить, если в ней слишком много внимания уделяется
+            определениям, аксиомам, доказательствам и пограничным случаям, особенно если речь идет о вводном материале,
+            предназначенном в первую очередь для инженеров.
+        </p>
+        <p class="NoIndent"><span class="h3">Unique authors.</span> Our combined experience brings together academic
+            authority with
+            in-the-trenches practical advice. Fletcher Dunn has been making video games professionally
+            since 1996. He worked at Terminal Reality in Dallas, where as principal programmer he was one
+            of the architects of the Infernal engine and lead programmer on <i>BloodRayne</i>. He was a
+            technical director for The Walt Disney Company at Wideload Games in Chicago and the lead
+            programmer for <i>Disney Guilty Party</i>, IGN's E3 2010 Family Game of the Year. He now works
+            for Valve Software in Bellevue, Washington and has contributed to Steam and all of Valve's recent
+            games. He is the primary author of the <a href="../../github.com/ValveSoftware/GameNetworkingSockets.html">GameNetworkingSockets</a>
+            networking library and the <a
+                    href="https://partner.steamgames.com/doc/features/multiplayer/steamdatagramrelay">Steam Datagram
+                Relay</a>
+            service. But his biggest claim to fame by far is as the namesake of Corporal Dunn from
+            <i>Call of Duty: Modern Warfare 2</i>.
+        </p>
+        <p>
+            <a href="http://ianparberry.com/">Dr. Ian Parberry</a> has more than 35 years of experience in research
+            and teaching in academia. This is his sixth book, his third on game programming. He is currently a
+            tenured full professor in the Department of Computer Science &amp; Engineering at the University of
+            North Texas. He is nationally known as one of the pioneers of game programming in higher education,
+            and has been teaching game programming classes at the University of North Texas continuously since 1993.
+        </p>
+        <p class="NoIndent"><span class="h3">Unique writing style.</span> We hope you will enjoy reading this math book
+            (say <i>what</i>?)
+            for two reasons. Most important, we want you to <i>learn</i> from this book, and learning
+            something you are interested in is fun. Secondarily, we want you to enjoy <i>reading</i> this
+            book in the same way that you enjoy reading a work of literature. We have no delusions that
+            we're in the same class as
+            Mark Twain, or that this book is destined to become a classic like, say,
+            <i>The Hitchhikers Guide to the Galaxy</i>. But one can always have aspirations. Honestly, we are
+            just
+            silly people. At the same time, no writing style should stand in the way of the first
+            priority: clear communication of mathematical knowledge about video games.<a href="#footnote_2"
+                                                                                         class="FootnoteRef">2</a>
+        </p>
 
-<h1 id="prerequisites"><span class="SectionTitle">What You Should Know before Reading This Book</span></h1>
-<p class="NoIndent">We have tried to make the book accessible to as wide an audience as possible; no book, however,
-can go back all the way to first principles.  We expect from the reader the following basic
-mathematical skills:
-</p>
-<ul>
-    <li>
-Manipulating algebraic expressions, fractions, and basic algebraic laws such
-        as the associative and distributive laws and the
-            quadratic equation.
-</li>
-<li>
-Understanding what variables are, what a function is, how to graph a function,
-        and so on.
-</li>
-<li>
-Some very basic 2D Euclidian geometry, such as what a point is,
-        what a line is, what it means for lines to be parallel and perpendicular, and so forth.
-        Some basic formulas for area and circumference are used in a few places.  It's
-        OK if you have temporarily forgotten those&#8212;you will hopefully recognize them when
-        you see them.
-</li>
-<li>
-Some prior exposure to trigonometry is best.  We give a brief review of
-        trigonometry in the front of this book, but it is not presented with the same level
-        of paced explanation found most elsewhere in this book.
-</li>
-<li>
-Readers with some prior exposure to
-        calculus will have an advantage, but we have restricted our use of calculus in this
-        book to very basic principles, which we will (attempt to) teach in
-        <a href="kinematics_calculus.html">Chapter&#160;11</a> for those without this training. Only the most
-        high-level concepts and fundamental laws are needed.
-</li>
-</ul>
-<p>
-Some programming knowledge is helpful, but <i>not</i> required.  In several places, we give brief
-code snippets to show how the ideas being discussed get translated into code.  (Also certain
-procedures are just easier to explain in code.)  These snippets are extremely basic, well
-commented, and require only the most rudimentary understanding of C language syntax (which has
-been copied to several other languages). Most technical artists or level designers should be able
-to interpret these snippets with ease.
-</p>
+        <h1 id="prerequisites"><span class="SectionTitle">What You Should Know before Reading This Book</span></h1>
+        <p class="NoIndent">We have tried to make the book accessible to as wide an audience as possible; no book,
+            however,
+            can go back all the way to first principles. We expect from the reader the following basic
+            mathematical skills:
+        </p>
+        <ul>
+            <li>
+                Manipulating algebraic expressions, fractions, and basic algebraic laws such
+                as the associative and distributive laws and the
+                quadratic equation.
+            </li>
+            <li>
+                Understanding what variables are, what a function is, how to graph a function,
+                and so on.
+            </li>
+            <li>
+                Some very basic 2D Euclidian geometry, such as what a point is,
+                what a line is, what it means for lines to be parallel and perpendicular, and so forth.
+                Some basic formulas for area and circumference are used in a few places. It's
+                OK if you have temporarily forgotten those&#8212;you will hopefully recognize them when
+                you see them.
+            </li>
+            <li>
+                Some prior exposure to trigonometry is best. We give a brief review of
+                trigonometry in the front of this book, but it is not presented with the same level
+                of paced explanation found most elsewhere in this book.
+            </li>
+            <li>
+                Readers with some prior exposure to
+                calculus will have an advantage, but we have restricted our use of calculus in this
+                book to very basic principles, which we will (attempt to) teach in
+                <a href="kinematics_calculus.html">Chapter&#160;11</a> for those without this training. Only the most
+                high-level concepts and fundamental laws are needed.
+            </li>
+        </ul>
+        <p>
+            Some programming knowledge is helpful, but <i>not</i> required. In several places, we give brief
+            code snippets to show how the ideas being discussed get translated into code. (Also certain
+            procedures are just easier to explain in code.) These snippets are extremely basic, well
+            commented, and require only the most rudimentary understanding of C language syntax (which has
+            been copied to several other languages). Most technical artists or level designers should be able
+            to interpret these snippets with ease.
+        </p>
 
-<h1 id="overview"><span class="SectionTitle">Overview</span></h1>
-<ul>
-    <li>
-<span class="ListItemTitle"><a href="cartesianspace.html">Chapter&#160;1</a></span> gets warmed up with some groundwork that
-        it is needed in the rest of the book and which you probably already know.  It
-        reviews the Cartesian coordinate system in 2D and 3D and discusses how to use
-        the Cartesian coordinate system to locate points in space.  Also included is a very
-        quick refresher on trigonometry and summation notation.
-</li>
-<li>
-<span class="ListItemTitle"><a href="vectors.html">Chapter&#160;2</a></span> introduces vectors from a mathematical and geometric
-        perspective and investigates the important relationship between points and vectors.
-        It also discusses a number of vector operations, how to do them, what it means geometrically
-        to do them, and situations for which you might find them useful.
-</li>
-<li>
-<span class="ListItemTitle"><a href="multiplespaces.html">Chapter&#160;3</a></span> discusses examples of coordinate spaces
-        and how they are nested in a hierarchy.  It also introduces the central concepts
-        of basis vectors and coordinate-space transformations.
-</li>
-<li>
-<span class="ListItemTitle"><a href="matrixintro.html">Chapter&#160;4</a></span> introduces matrices from a mathematical and geometric
-        perspective and shows how matrices are a compact notation for the math behind
-        linear transformations.
-</li>
-<li>
-<span class="ListItemTitle"><a href="matrixtransforms.html">Chapter&#160;5</a></span> surveys different types of linear
-        transformations and their corresponding matrices in detail.  It also discusses
-        various ways to classify transformations.
-</li>
-<li>
-<span class="ListItemTitle"><a href="matrixmore.html">Chapter&#160;6</a></span> covers a few more interesting and useful
-        properties of matrices, such as affine transforms and perspective projection,
-        and explains the purpose and workings of four-dimensional vectors and matrices
-        within a three-dimensional world.
-</li>
-<li>
-<span class="ListItemTitle"><a href="polarspace.html">Chapter&#160;7</a></span> discusses how to use polar coordinates
-        in 2D and 3D, why it is useful to do so, and how to convert between polar and
-        Cartesian representations.
-</li>
-<li>
-<span class="ListItemTitle"><a href="orient.html">Chapter&#160;8</a></span> discusses different techniques for representing orientation
-        and angular displacement in 3D: Euler angles, rotation matrices, exponential maps, and
-        quaternions.  For each method, it explains how the method works and presents the
-        advantages and disadvantages of the method and when its use is recommended.
-        It also shows how to convert between different representations.
-</li>
-<li>
-<span class="ListItemTitle"><a href="geomprims.html">Chapter&#160;9</a></span> surveys a number of commonly used geometric
-        primitives and discusses how to represent and manipulate them mathematically.
-</li>
-<li>
-<span class="ListItemTitle"><a href="graphics.html">Chapter&#160;10</a></span> is a whirlwind lesson on graphics, touching on
-        a few selected theoretical as well as modern practical issues.  First, it presents
-        a high-level overview of &#8220;how graphics works,&#8221; leading up to the rendering equation.
-        The chapter then walks through a few theoretical topics of a mathematical nature.  Next
-        it discusses two contemporary topics that are often sources of mathematical difficulty
-        and should be of particular interest to the reader: skeletal animation
-        and bump mapping.  Finally, the chapter presents an overview of the real-time graphics pipeline,
-        demonstrating how the theories from the first half of the chapter are implemented in the
-        context of current rendering hardware.
-</li>
-<li>
+        <h1 id="overview"><span class="SectionTitle">Overview</span></h1>
+        <ul>
+            <li>
+                <span class="ListItemTitle"><a href="cartesianspace.html">Chapter&#160;1</a></span> gets warmed up with
+                some groundwork that
+                it is needed in the rest of the book and which you probably already know. It
+                reviews the Cartesian coordinate system in 2D and 3D and discusses how to use
+                the Cartesian coordinate system to locate points in space. Also included is a very
+                quick refresher on trigonometry and summation notation.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="vectors.html">Chapter&#160;2</a></span> introduces vectors from a
+                mathematical and geometric
+                perspective and investigates the important relationship between points and vectors.
+                It also discusses a number of vector operations, how to do them, what it means geometrically
+                to do them, and situations for which you might find them useful.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="multiplespaces.html">Chapter&#160;3</a></span> discusses examples
+                of coordinate spaces
+                and how they are nested in a hierarchy. It also introduces the central concepts
+                of basis vectors and coordinate-space transformations.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="matrixintro.html">Chapter&#160;4</a></span> introduces matrices
+                from a mathematical and geometric
+                perspective and shows how matrices are a compact notation for the math behind
+                linear transformations.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="matrixtransforms.html">Chapter&#160;5</a></span> surveys different
+                types of linear
+                transformations and their corresponding matrices in detail. It also discusses
+                various ways to classify transformations.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="matrixmore.html">Chapter&#160;6</a></span> covers a few more
+                interesting and useful
+                properties of matrices, such as affine transforms and perspective projection,
+                and explains the purpose and workings of four-dimensional vectors and matrices
+                within a three-dimensional world.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="polarspace.html">Chapter&#160;7</a></span> discusses how to use
+                polar coordinates
+                in 2D and 3D, why it is useful to do so, and how to convert between polar and
+                Cartesian representations.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="orient.html">Chapter&#160;8</a></span> discusses different
+                techniques for representing orientation
+                and angular displacement in 3D: Euler angles, rotation matrices, exponential maps, and
+                quaternions. For each method, it explains how the method works and presents the
+                advantages and disadvantages of the method and when its use is recommended.
+                It also shows how to convert between different representations.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="geomprims.html">Chapter&#160;9</a></span> surveys a number of
+                commonly used geometric
+                primitives and discusses how to represent and manipulate them mathematically.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="graphics.html">Chapter&#160;10</a></span> is a whirlwind lesson on
+                graphics, touching on
+                a few selected theoretical as well as modern practical issues. First, it presents
+                a high-level overview of &#8220;how graphics works,&#8221; leading up to the rendering equation.
+                The chapter then walks through a few theoretical topics of a mathematical nature. Next
+                it discusses two contemporary topics that are often sources of mathematical difficulty
+                and should be of particular interest to the reader: skeletal animation
+                and bump mapping. Finally, the chapter presents an overview of the real-time graphics pipeline,
+                demonstrating how the theories from the first half of the chapter are implemented in the
+                context of current rendering hardware.
+            </li>
+            <li>
 <span class="ListItemTitle"><a href="kinematics_calculus.html">Chapter&#160;11</a>
 </span> crams two rather large topics
-        into one chapter.  It interleaves the highest-level topics from first-semester
-        calculus with a discussion of rigid body kinematics&#8212;how to describe and analyze
-        the motion of a rigid body without necessarily understanding its cause or being concerned
-        with orientation or rotation.
-</li>
-<li>
-<span class="ListItemTitle"><a href="dynamics.html">Chapter&#160;12</a></span> continues the discussion of rigid body mechanics.
-        It starts with a condensed explanation of classical mechanics, including Newton's laws of
-        motion and basic concepts such as inertia, mass, force, and momentum.
-        It reviews a few basic force laws, such as gravity, springs, and friction.  The chapter
-        also considers the rotational analogs of all of the linear ideas discussed up to this point.
-        Due attention is paid to the important topic of collisions.  The chapter
-        ends with a discussion of issues that arise when using a computer to simulate rigid bodies.
-</li>
-<li>
-<span class="ListItemTitle"><a href="curves.html">Chapter&#160;13</a></span> explains parametric curves in 3D.  The first
-        half of the chapter explains how a relatively short curve is represented in
-        some common, important forms: monomial, B&#233;zier, and Hermite.  The second half
-        is concerned with fitting together these shorter pieces into a longer curve, called
-        a <i>spline</i>.  In understanding each system, the chapter considers what controls the system
-        presents to a designer of curves, how to take a description of a curve made
-        by a designer and recreate the curve, and how these controls can be used to construct
-        a curve with specific properties.
-</li>
-<li>
-<span class="ListItemTitle"><a href="afterword.html">Chapter&#160;14</a></span> inspires the reader to pursue greatness in video games.
-</li>
-<li>
-<span class="ListItemTitle">Appendix A</span> is an assortment of useful tests that can be
-        performed on geometric primitives.  We intend it to be a helpful reference, but
-        it can also make for interesting browsing.
-</li>
-<li>
-<span class="ListItemTitle">Appendix B</span> has all the answers.<a href="#footnote_3" class="FootnoteRef">3</a>
-</li>
-</ul>
+                into one chapter. It interleaves the highest-level topics from first-semester
+                calculus with a discussion of rigid body kinematics&#8212;how to describe and analyze
+                the motion of a rigid body without necessarily understanding its cause or being concerned
+                with orientation or rotation.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="dynamics.html">Chapter&#160;12</a></span> continues the discussion
+                of rigid body mechanics.
+                It starts with a condensed explanation of classical mechanics, including Newton's laws of
+                motion and basic concepts such as inertia, mass, force, and momentum.
+                It reviews a few basic force laws, such as gravity, springs, and friction. The chapter
+                also considers the rotational analogs of all of the linear ideas discussed up to this point.
+                Due attention is paid to the important topic of collisions. The chapter
+                ends with a discussion of issues that arise when using a computer to simulate rigid bodies.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="curves.html">Chapter&#160;13</a></span> explains parametric curves
+                in 3D. The first
+                half of the chapter explains how a relatively short curve is represented in
+                some common, important forms: monomial, B&#233;zier, and Hermite. The second half
+                is concerned with fitting together these shorter pieces into a longer curve, called
+                a <i>spline</i>. In understanding each system, the chapter considers what controls the system
+                presents to a designer of curves, how to take a description of a curve made
+                by a designer and recreate the curve, and how these controls can be used to construct
+                a curve with specific properties.
+            </li>
+            <li>
+                <span class="ListItemTitle"><a href="afterword.html">Chapter&#160;14</a></span> inspires the reader to
+                pursue greatness in video games.
+            </li>
+            <li>
+                <span class="ListItemTitle">Appendix A</span> is an assortment of useful tests that can be
+                performed on geometric primitives. We intend it to be a helpful reference, but
+                it can also make for interesting browsing.
+            </li>
+            <li>
+                <span class="ListItemTitle">Appendix B</span> has all the answers.<a href="#footnote_3"
+                                                                                     class="FootnoteRef">3</a>
+            </li>
+        </ul>
 
-<h1 id="feedback"><span class="SectionTitle">How to Give Feedback</span></h1>
-<p class="NoIndent">We calculated the odds that we could write an 800+&#160;page math book free of mistakes.  The result
-was a negative number, which we know can't be right, but is probably pretty close.
-If you find a bug in this book, or have feedback of any kind, send
-an email to <span class="FontFixedWidth"><span class="hbox">feedback</span>@<span class="hbox">gamemath</span>.<span class="hbox">com</span></span>
-or reach out to Fletcher on twitter (<a href="../../twitter.com/zpostfacto">@ZPostFacto</a>).
-</p>
-<div class="ChapterEndQuotes">
-<div class="WittyQuotation">
-        Careful. We don't want to learn from this.
-<div class="QuotationSource">
-&#8212;&#160;Bill Watterson (1958&#8211;) from <i>Calvin and
-            Hobbes</i>
+        <h1 id="feedback"><span class="SectionTitle">How to Give Feedback</span></h1>
+        <p class="NoIndent">We calculated the odds that we could write an 800+&#160;page math book free of mistakes. The
+            result
+            was a negative number, which we know can't be right, but is probably pretty close.
+            If you find a bug in this book, or have feedback of any kind, send
+            an email to <span class="FontFixedWidth"><span class="hbox">feedback</span>@<span
+                    class="hbox">gamemath</span>.<span class="hbox">com</span></span>
+            or reach out to Fletcher on twitter (<a href="../../twitter.com/zpostfacto">@ZPostFacto</a>).
+        </p>
+        <div class="ChapterEndQuotes">
+            <div class="WittyQuotation">
+                Careful. We don't want to learn from this.
+                <div class="QuotationSource">
+                    &#8212;&#160;Bill Watterson (1958&#8211;) from <i>Calvin and
+                    Hobbes</i>
+                </div>
+            </div>
+        </div>
+        <ol class="Footnotes">
+            <li id="footnote_0">
+                Что ж, возможно, ты останешься за бортом некоторых шуток, вроде этой. Извини.
+            </li>
+            <li id="footnote_1">
+                Which is why
+                we've put most of the jokes and useless trivia in footnotes
+                like this. Somehow, we felt like we could get away with more that way.
+            </li>
+            <li id="footnote_2">To the exercises, that is.</li>
+        </ol>
+        <footer class="NavBar">
+            <div class="NavPrevChapter"></div>
+            <div class="NavContents"><a onclick="window.scrollTo(0,0);" style="cursor:pointer;">Наверх</a>
+            </div>
+            <div class="NavNextChapter"><a class="NavChapterNum" href="cartesianspace.html">Декартова система координат
+                >>
+            </a></div>
+        </footer>
+    </div>
+    <div id="RightColumn"></div>
 </div>
-</div>
-</div><ol class="Footnotes">
-<li id="footnote_0">
-Что ж, возможно, ты останешься за бортом некоторых шуток, вроде этой. Извини.
-</li>
-<li id="footnote_1">
-Which is why
-we've put most of the jokes and useless trivia in footnotes
-    like this.  Somehow, we felt like we could get away with more that way.
-</li>
-<li id="footnote_2">To the exercises, that is.</li>
-</ol>
-<footer class="NavBar">
-<div class="NavPrevChapter"></div><div class="NavContents"><a onclick="window.scrollTo(0,0);" style="cursor:pointer;">Наверх</a>
-</div><div class="NavNextChapter"><a class="NavChapterNum" href="cartesianspace.html">Декартова система координат >>
-</a></div>
-</footer></div>
-<div id="RightColumn"></div>
-</div></body>
+</body>
 <!-- Mirrored from gamemath.com/book/intro.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 May 2025 17:04:29 GMT -->
 </html>
