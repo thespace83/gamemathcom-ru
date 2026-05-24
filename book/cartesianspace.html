@@ -18,7 +18,7 @@
         gtag('js', new Date());
         gtag('config', 'G-YK41S9NXZG');
     </script>
-    <title>Cartesian Coordinate Systems - 3D Math Primer for Graphics and Game Development</title>
+    <title>Декартова Система Координат - Учебник По Математике 3D-графики И Разработке Игр</title>
     <style id="MJX-CHTML-styles">
         mjx-container[jax="CHTML"] {
             line-height: 0;
@@ -1548,7 +1548,7 @@
                 <a class="NavChapterNum" href="vectors.html">Vectors &gt;&gt;</a></div>
         </header>
         <div class="ChapterTitleSection">
-            <div class="ChapterNumber">Chapter 1
+            <div class="ChapterNumber">Глава 1
                 <img style="float:right; width:1em; height:1em" id="lightmodetoggle" src="../light_dark_toggle.png">
             </div>
             <script>
@@ -1562,55 +1562,50 @@
                         window.localStorage.setItem('lightMode', lightmode)
                 }
             </script>
-            <div class="ChapterTitle">Cartesian Coordinate Systems</div>
+            <div class="ChapterTitle">Декартова Система Координат</div>
             <div class="ChapterQuotes">
                 <div class="WittyQuotation">
-                    Before turning to those moral and mental aspects of the matter which
-                    present the greatest difficulties, let the inquirer begin by mastering
-                    more elementary problems.
-                    <div class="QuotationSource">&#8212;&#160;Sherlock Holmes from <i>A Study in Scarlett</i> (1887)
+                    Прежде чем обратиться к моральным и интеллектуальным аспектам проблемы, в которых заключаются самые
+                    большие трудности, исследователю надлежит приобрести более простые навыки.
+                    <div class="QuotationSource">— Шерлок Холмс из <i>Этюда А Багровых Тонах</i> (1887)
                     </div>
                 </div>
             </div>
         </div>
         <p class="NoIndent">
-            3D math is all about measuring locations, distances, and angles precisely and mathematically in 3D
-            space. The most frequently used framework to perform such calculations using a computer is called
-            the <i>Cartesian coordinate system</i>. Cartesian mathematics was invented by (and is named after)
-            a brilliant French philosopher, physicist, physiologist, and mathematician named
-            Ren&#233; Descartes, who lived from 1596 to 1650. Ren&#233; Descartes is famous not just for
-            inventing Cartesian mathematics, which at the time was a stunning unification of algebra and
-            geometry. He is also well-known for making a pretty good stab of answering the question
-            &#8220;How do I know something is true?&#8221;&#8212;a question that has kept generations of philosophers
-            happily
-            employed and does not necessarily involve dead sheep (which will perhaps disturbingly be a central
-            feature of the next section), unless you really want it to. Descartes rejected the answers proposed
-            by the Ancient Greeks, which are <i>ethos</i> (roughly, &#8220;because I told you so&#8221;), <i>pathos</i>
-            (&#8220;because it would be nice&#8221;), and <i>logos</i> (&#8220;because it makes sense&#8221;), and set
-            about
-            figuring it out for himself with a pencil and paper.
+            Трехмерная математика — это точное математическое измерение местоположения, расстояний и углов в трехмерном
+            пространстве. Наиболее часто используемая система для выполнения таких вычислений на компьютере называется
+            <i>Декартовой Системой Координат</i>. Декартова математика была изобретена блестящим Французским философом,
+            физиком и математиком Рене Декартом, жившим с 1596 по 1650 годы. Рене Декарт прославился не только
+            тем, что изобрел аналитическую геометрию, которая в то время представляла собой потрясающее объединение
+            алгебры и геометрии. Он также известен тем, что довольно убедительно ответил на вопрос «Откуда мне знать,
+            что что-то правда?» — вопрос, над которым с удовольствием размышляли целые поколения философов, и который не
+            обязательно связан с мертвыми овцами (что, возможно, станет главной темой следующего раздела, вызывающей
+            трудности) если только ты сам того не хочешь. Декарт отверг ответы, предложенные древними греками, а именно
+            этос (грубо говоря, «потому что я так сказал»), пафос («потому что это было бы здорово») и логос («потому
+            что в этом есть смысл»), и решил разобраться во всем самостоятельно, вооружившись карандашом и бумагой.
         </p>
         <p>
-            This chapter is divided into four main sections.
+            Эта глава разделена на несколько основных разделов:
         </p>
         <ul>
             <li>
-                <a href="#1d">Section&#160;1.1</a> reviews some basic principles of number systems and the first law of
-                computer graphics.
+                <a href="#1d">Раздел 1.1</a> рассматривает основные принципы систем счисления и первый закон
+                компьютерной графики.
             </li>
             <li>
-                <a href="#2d">Section&#160;1.2</a> introduces 2D Cartesian mathematics, the mathematics of flat
-                surfaces. It shows how to describe a 2D cartesian coordinate space and how to locate
-                points using that space.
+                <a href="#2d">Раздел 1.2</a> вводит двумерную Декартову математику — математику плоских поверхностей.
+                Здесь рассказано как определять расположение точек в 2D пространстве.
             </li>
             <li>
-                <a href="#3d_cartesian">Section&#160;1.3</a> extends these ideas into three dimensions. It explains
-                left- and right-handed coordinate spaces and establishes some conventions used in this
-                book.
+                <a href="#3d_cartesian">Раздел 1.3</a> расширяет идеи до трех измерений. В неё рассказано о лево- и
+                право-руких система х координат и устанавливает некоторые условные обозначения, используемые в этой
+                книге.
             </li>
             <li>
-                <a href="#odds_and_ends">Section&#160;1.4</a> concludes the chapter by quickly reviewing assorted
-                prerequisites.
+                <a href="#odds_and_ends">Раздел 1.4</a> завершает главу кратким обзором различных предварительных
+                сведений.
+                <!-- TODO Точнее понять смысл -->
             </li>
         </ul>
 
